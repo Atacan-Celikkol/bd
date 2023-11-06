@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğum Günü Kutlaması</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.x/dist/fireworks.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="fireworks-container"></div>
+
+    <div class="first-container">
+        <div id="countdown-container">
+            <div id="countdown">
+                <span id="days"></span>
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+            </div>
+        </div>
+        <div class="heart-container">
+            <div class="heart" onclick="startCelebration();">&#10084;</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="greeting-card">
+            <p id="custom-message">Doğum günün kutlu olsun!</p>
+            <h1 id="birthday-name"></h1>
+        </div>
+    </div>
+</body>
+
+</html>

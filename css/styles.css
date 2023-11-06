@@ -1,0 +1,157 @@
+/* Global Styles */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/images/backgrounds/bgh1.webp');
+}
+
+/* Mobil cihazlar için medya sorgusu */
+@media only screen and (max-width: 768px) {
+
+    /* veya ihtiyaca göre bir maksimum genişlik belirleyin */
+    body {
+        background-image: url('../assets/images/backgrounds/bgv1.webp');
+    }
+
+    .heart {
+        font-size: 50vw !important;
+    }
+
+    .greeting-card {
+        font-size: 6.5vw !important;
+    }
+}
+
+.first-container {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.fireworks-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.greeting-card {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5vw;
+}
+
+/* Kutlama mesajı stilleri */
+#birthday-name {
+    font-size: 2em;
+    color: #84e1ff;
+    text-shadow: 0 0 5px #3d616d;
+}
+
+#custom-message {
+    font-size: 1.5em;
+    color: #cd88ff;
+    text-shadow: 0 0 10px #8459a3;
+}
+
+/* Kalp ikonu stilleri */
+.heart {
+    font-size: 50vh;
+    cursor: pointer;
+    color: #f33;
+    text-shadow: 0 0 2vw #f33;
+    animation: beat 1s infinite;
+}
+
+.disappear {
+    animation: disappear 2s;
+    opacity: 0;
+}
+
+@keyframes disappear {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes beat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+
+#countdown-container {
+    text-align: center;
+    color: white;
+}
+
+#countdown span {
+    display: inline-block;
+    font-size: 25pt;
+    margin: 0 15px;
+    text-shadow: 1px 1px 3px rgba(187, 187, 187, 0.5);
+}
+
+/* Basit bir animasyon ekleyelim */
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#countdown span {
+    animation: popIn 0.5s ease forwards;
+}
