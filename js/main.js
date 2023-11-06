@@ -112,7 +112,7 @@ function updateCountdown(targetDate) {
     }
 }
 
-const targetDate = new Date('Nov 7, 2023 00:00:00').getTime();
+const targetDate = new Date('Nov 7, 2023 00:20:00').getTime();
 // let now = new Date();
 // const targetDate = now.setSeconds(now.getSeconds() + 3);
 
